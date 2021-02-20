@@ -21,6 +21,7 @@ namespace ghp
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseWebRoot(args.Length >= 1 ? args[0] : ".");
                 });
     }
 }
